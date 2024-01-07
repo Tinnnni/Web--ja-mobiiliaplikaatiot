@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgb(227, 186, 120);
+}
+
+
+/*Headerin css-asetukset*/
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.navbar {
+    
+  --bs-navbar-color: black; /*rgba(var(--bs-emphasis-color-rgb), 0.65);*/
+  --bs-navbar-hover-color: gray; /*rgba(var(--bs-emphasis-color-rgb), 0.8);*/
+  --bs-navbar-brand-color: gray; /*rgba(var(--bs-emphasis-color-rgb), 1);*/
+}
+
+.bg-body-tertiary {
+  background-color: darkgrey !important; /*rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;*/
+}
+
+.navbar-nav {
+  justify-content: space-evenly !important;
+}
+
+.nav-item {
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+/*Osion 1 css-asetukset*/
+
+#osio1 {
+   margin-top: 55px;
+  width: 100%;
+  height: 100vh;
+
+  background-image: url(./images/ISO\ KUVA\ ian-dooley-DJ7bWa-Gwks-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+  
+}
+
+@keyframes kirjaimet {
+
+
+    0%   {rgba(156, 221, 246, 0.589); left:-80px; top:70%;}
+    100%  {rgba(156, 221, 246, 0.589); left:10%; top:70%;}
+    /*100% {
+        background-position: 0 0;
+    }*/
+
+
+}
+
+#animaatio {
+    color: black;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: translate(-50%, -50% );
+    /*-webkit-text-stroke: 1px whitesmoke;*/
+    /*color: transparent;*/
+    background-image: linear-gradient(black, black);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+
+    animation-delay: 0s;
+    animation-name: kirjaimet;
+    animation-duration: 3s;
+    /*animation-timing-function: linear;*/
+    /*animation-direction: alternate;*/
+    /*animation-iteration-count: 40;*/
+}
+
+
+
+/*Tietoja minusta osion css-asetukset*/
+
+
+#tietoja_minusta_osio {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+#profiilikuva {
+    padding: 15px;
+    display: flex;
+}
+
+#leipateksti {
+    margin: 20px 20px 20px 20px;
+    padding-left: 15px;
+}
+
+
+/*Video-esittely css-asetukset*/
+
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 333px;
+}
+
+/*Koulutus-osion css-asetukset*/
+
+#koulutus {
+    padding: 20px;
+}
+
+/*Työhistoria-osuuden css-asetukset*/
+
+#tyohistoria {
+    padding: 20px;
+}
+
+#tyo_otsikko {
+    text-align: center;
+}
+
+
+/*vapaa-aika osion css-asetukset*/
+
+#vapaa-aika {
+    background-image: url(./images/TAUSTAKUVA\ omid-armin-spYYjjazRXI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -1;
+    color: white;
+    padding: 20px;
+}
+
+#vapaa-aika_otsikko {
+    text-align: right;
+}
+
+
+/*linkit-osion css-asetukset*/
+
+#linkit {
+    padding: 20px;
+    
+}
+
+#kortit-flex {
+
+display: flex;
+flex-direction: row;
+padding: 15px;
+justify-content: space-around;
+
+}
+
+.card {
+    z-index: -1;
+    padding: 15px;
+}
+
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: rgb(227, 186, 120);
+    --bs-btn-border-color: rgb(227, 186, 120);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+
+
+/*ota yhteyttä-osion css-asetukset*/
+
+#ota_yhteytta {
+  padding: 20px 50px 20px 50px;
+}
+
+#laheta_nappi {
+  background-color: rgb(184, 151, 98);;
+}
+
+/*footerin css-asetukset*/
+
+#footer {
+  margin: 20px 30px 20px 30px;
+  text-align: right;
+}
+
+
+/*Media queries tabletille*/
+
+@media only screen and (max-width: 768px) {
+  #osio1 {
+    height: 50vh;
+  }
+
+  #tietoja_minusta_osio{
+    flex-direction: column;
+  }
+
+  #leipateksti {
+    margin: 20px 0px 0px 0px;
+    padding: 15px;
+  }
+
+  #profiilikuva {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #osio2otsikko {
+    text-align: center;
+  }
+
+
+  #kortit-flex {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    padding-top:10px ;
+    
+    }
+
+    .card {
+      margin-top: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+
+}
+
+/*Media queries puhelimelle*/
+
+@media only screen and (max-width: 425px) {
+  #osio1 {
+    height: 35vh;
+  }
+
+  #animaatio {
+    font-size: medium;
+  }
+
+  #tietoja_minusta_osio {
+    display: inline;
+  }
+
+  #profiilikuva {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 202px;
+  }
+
+  #leipateksti {
+    padding: 0px;
+    margin: 20px 10px 0px 10px;
+  }
+
+  iframe {
+    width: 300px;
+    height: 200px;
+  }
+
+  #kortit-flex {
+
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: space-around;
+    
+    }
+
+    .card {
+      margin-top: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    
+
+
+}
